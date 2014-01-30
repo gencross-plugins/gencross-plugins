@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<packaging>pom</packaging>
+	
+	<artifactId>gencross-plugins</artifactId>
+	<groupId>com.mrprez.gencross.plugins</groupId>
+	<version>1.1-SNAPSHOT</version>
+	
+	<parent>
+		<artifactId>mrprez</artifactId>
+		<groupId>com.mrprez</groupId>
+		<version>1.0</version>
+	</parent>
+	
+	
+	<modules>
+		<module>bsg</module>
+		<module>capharnaum</module>
+		<module>changelin</module>
+		<module>cthulhuPerso</module>
+		<module>fusina</module>
+		<module>ins</module>
+		<module>insCustom</module>
+		<module>l5a</module>
+		<module>mdt</module>
+		<module>mv</module>
+		<module>polarisPerso</module>
+		<module>sens</module>
+		<module>tiersAge</module>
+		<module>warhammer</module>
+		<module>yggdrasill</module>
+		
+		<module>plugin-repository</module>
+		
+	</modules>
+	
+	<dependencies>
+		<dependency>
+			<artifactId>gencross</artifactId>
+			<groupId>com.mrprez.gencross</groupId>
+			<version>${gencross.version}</version>
+		</dependency>
+		<dependency>
+			<artifactId>gencross</artifactId>
+			<groupId>com.mrprez.gencross</groupId>
+			<version>${gencross.version}</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+			<scope>test</scope>
+		</dependency>
+		
+
+	</dependencies>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>com.mrprez.gencross</groupId>
+										<artifactId>personnage-packager-plugin</artifactId>
+										<versionRange>[1.0,)</versionRange>
+										<goals>
+											<goal>encode</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute>
+											<runOnIncremental>true</runOnIncremental>
+										</execute>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	
+	
+		<plugins>
+			<plugin>
+				<groupId>com.mrprez.gencross</groupId>
+				<artifactId>personnage-packager-plugin</artifactId>
+				<version>${personnage-packager-plugin.version}</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>encode</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+		</plugins>
+	</build>
+	
+	
+	
+	
+</project>
