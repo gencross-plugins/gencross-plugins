@@ -15,27 +15,11 @@
 		<version>1.0</version>
 	</parent>
 	
+	<properties>
+		<gencross.version>1.12</gencross.version>
+	</properties>
 	
-	<modules>
-		<module>bsg</module>
-		<module>capharnaum</module>
-		<module>changelin</module>
-		<module>cthulhuPerso</module>
-		<module>fusina</module>
-		<module>ins</module>
-		<module>insCustom</module>
-		<module>l5a</module>
-		<module>mdt</module>
-		<module>mv</module>
-		<module>polarisPerso</module>
-		<module>sens</module>
-		<module>tiersAge</module>
-		<module>warhammer</module>
-		<module>yggdrasill</module>
-		
-		<module>plugin-repository</module>
-		
-	</modules>
+	
 	
 	<dependencies>
 		<dependency>
