@@ -19,7 +19,11 @@
 		<gencross.version>1.12</gencross.version>
 	</properties>
 	
-	
+	<scm>
+		<connection>scm:git:git://github.com/gencross-plugins/gencross-plugins.git</connection>
+		<developerConnection>scm:git:https://github.com/gencross-plugins/gencross-plugins.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
 	
 	<dependencies>
 		<dependency>
