@@ -15,7 +15,7 @@
 	</parent>
 	
 	<properties>
-		<gencross.version>1.15</gencross.version>
+		<gencross.version>1.16</gencross.version>
 	</properties>
 	
 	<scm>
