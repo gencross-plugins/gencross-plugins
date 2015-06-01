@@ -6,7 +6,7 @@
 	
 	<artifactId>gencross-plugins</artifactId>
 	<groupId>com.mrprez.gencross.plugins</groupId>
-	<version>1.5-SNAPSHOT</version>
+	<version>1.5</version>
 	
 	<parent>
 		<artifactId>mrprez</artifactId>
@@ -21,7 +21,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/gencross-plugins/gencross-plugins.git</connection>
 		<developerConnection>scm:git:git@github.com:gencross-plugins/gencross-plugins.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>gencross-plugins-1.5</tag>
 	</scm>
 	
 	<dependencies>
