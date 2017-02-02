@@ -15,7 +15,7 @@
 	</parent>
 	
 	<properties>
-		<gencross.version>1.19-SNAPSHOT</gencross.version>
+		<gencross.version>1.19</gencross.version>
 	</properties>
 	
 	<scm>
