@@ -1,39 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<packaging>pom</packaging>
-	
-	<artifactId>gencross-plugins</artifactId>
+
+	<artifactId>plugins-parent</artifactId>
 	<groupId>com.mrprez.gencross.plugins</groupId>
 	<version>1.7-SNAPSHOT</version>
-	
+
 	<parent>
-		<artifactId>mrprez</artifactId>
-		<groupId>com.mrprez</groupId>
-		<version>1.4</version>
+		<artifactId>parent</artifactId>
+		<groupId>com.mrprez.gencross</groupId>
+		<version>1.5-SNAPSHOT</version>
 	</parent>
-	
+
 	<properties>
-		<gencross.version>1.19</gencross.version>
+		<gencross-api.version>1.20-SNAPSHOT</gencross-api.version>
 	</properties>
-	
+
 	<scm>
-		<connection>scm:git:git://github.com/gencross-plugins/gencross-plugins.git</connection>
-		<developerConnection>scm:git:git@github.com:gencross-plugins/gencross-plugins.git</developerConnection>
+		<connection>scm:git:git://github.com/mrprez/gencross-plugins-parent.git</connection>
+		<developerConnection>scm:git:git@github.com:mrprez/gencross-plugins-parent.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub mrprez Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/mrprez/gencross-plugins-parent</url>
+		</repository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/mrprez/*</url>
+		</repository>
+	</repositories>
 	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/mrprez/*</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<dependencies>
 		<dependency>
-			<artifactId>gencross</artifactId>
+			<artifactId>gencross-api</artifactId>
 			<groupId>com.mrprez.gencross</groupId>
-			<version>${gencross.version}</version>
+			<version>${gencross-api.version}</version>
 		</dependency>
 		<dependency>
-			<artifactId>gencross</artifactId>
+			<artifactId>gencross-api</artifactId>
 			<groupId>com.mrprez.gencross</groupId>
-			<version>${gencross.version}</version>
+			<version>${gencross-api.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
@@ -43,10 +67,10 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 
 	</dependencies>
-	
+
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -78,13 +102,13 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-	
-	
+
+
 		<plugins>
 			<plugin>
 				<groupId>com.mrprez.gencross</groupId>
 				<artifactId>personnage-packager-plugin</artifactId>
-				<version>1.7</version>
+				<version>1.9-SNAPSHOT</version>
 				<executions>
 					<execution>
 						<phase>generate-sources</phase>
@@ -94,11 +118,11 @@
 					</execution>
 				</executions>
 			</plugin>
-			
+
 		</plugins>
 	</build>
-	
-	
-	
-	
+
+
+
+
 </project>
